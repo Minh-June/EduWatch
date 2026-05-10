@@ -12,8 +12,14 @@ Clone:
 ```
 git clone https://github.com/Nolan-21-6-2005/BehaviorNet.git
 ```
+# Cách chạy
 
-### Cách chạy
+## Backend
+```
+uvicorn main:app --reload
+```
+
+## Frontend
 ```
 streamlit run main.py
 ```
