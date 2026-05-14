@@ -1,7 +1,0 @@
-[theme]
-base="light"
-primaryColor="#37BD74"
-font=""
-
-[client]
-showSidebarNavigation = false

@@ -1,6 +1,6 @@
 ## Dự án web AI nhận diện hành vi
 
-### Cài đặt github
+## Cài đặt github
 Gói cài đặt: https://git-scm.com/install/windows
 
 Hoặc sử dụng winget
@@ -12,14 +12,35 @@ Clone:
 ```
 git clone https://github.com/Nolan-21-6-2005/BehaviorNet.git
 ```
-# Cách chạy
+## Khởi tạo
 
-## Backend
+```github
+git init
+```
+
+## Thêm file
+
+```
+git add .
+```
+
+```
+git commit -m "message"
+```
+
+## Đẩy file
+
+```
+git push
+```
+## Cách chạy
+
+### Backend
 ```
 uvicorn main:app --reload
 ```
 
-## Frontend
+### Frontend
 ```
 streamlit run main.py
 ```

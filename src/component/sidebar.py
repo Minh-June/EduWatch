@@ -1,34 +1,9 @@
-import streamlit as st
+import nicegui as ui
 from pages.dashboard import show_dashboard
 
 def show_sidebar():
-    with st.sidebar:
-        selected = option_menu(
-            "EduWatch VNUA", [
-                "Giám sát trực tiếp",
-                "Nhật ký vi phạm", 
-                "Trang báo cáo", 
-                'Settings'
-                ],
-            icons = [
-                'camera-video', 
-                'journal', 
-                'bar-chart', 
-                'gear'
-                ], 
-            menu_icon="cast", 
-            default_index=1
-        )
-        ctn = st.container()
-        with ctn:
-            email = st.session_state.get("email")
-            st.subheader("Ten dang nhap")
-            st.write(email)
-        )
-    if selected == "Giám sát trực tiếp":
-        show_dashboard()
-    elif selected == "Trang báo cáo":
-        st.title("Trang báo cáo")
-
-    elif selected == "Settings":
-        st.title("Cài đặt hệ thống")
+    ui.button('Giám sát trực tiếp', onclick = lambda: ui.navigate.to('/detector'))
+    ui.button('Nhật ký vi phạm', onclick = lambda: ui.navigate.to('/log'))
+    ui.button('Thống kê báo cáo', onclick = lambda: ui.navigate.to('/report'))
+    ui.button('Cài đặt hệ thống', onclick = lambda: ui.navigate.to('/setting'))
+    ui.run()
