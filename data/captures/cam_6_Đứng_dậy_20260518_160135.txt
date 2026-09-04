@@ -1,3 +1,0 @@
-camera_id=6
-label=Đứng dậy
-captured_at=2026-05-18T16:01:35

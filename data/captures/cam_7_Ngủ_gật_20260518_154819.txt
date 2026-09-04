@@ -1,3 +1,0 @@
-camera_id=7
-label=Ngủ gật
-captured_at=2026-05-18T15:48:19

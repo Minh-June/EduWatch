@@ -46,3 +46,13 @@ reports-*.png
 reports-state-*.png
 spacing-auth-*.png
 buildings-ui-recovery*.png
+
+# Cache & Browser artifacts
+__pycache__/
+.chrome-*/
+.chrome-reports-spacing/
+
+# Database & generated data
+data/eduwatch.db
+data/reports/
+data/captures/
