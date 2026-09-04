@@ -1,46 +1,56 @@
-## Dự án web AI nhận diện hành vi
+# EduWatch VNUA
 
-## Cài đặt github
-Gói cài đặt: https://git-scm.com/install/windows
+EduWatch hiện có entrypoint Streamlit mới để thay thế giao diện NiceGUI cũ, trong khi `app.py` vẫn được giữ lại để đối chiếu.
 
-Hoặc sử dụng winget
+## Run
+
 ```powershell
-winget install --id Git.Git -e --source winget
+cd C:\Users\Admin\Desktop\EduWatch - Copy
+python init_db.py
+streamlit run streamlit_app.py
 ```
 
-Clone:
-```
-git clone https://github.com/Nolan-21-6-2005/BehaviorNet.git
-```
-## Khởi tạo
+Mở ứng dụng tại:
 
-```github
-git init
+```text
+http://localhost:8501
 ```
 
-## Thêm file
+## Demo Accounts
 
-```
-git add .
-```
+```text
+Admin: AD001 / admin123
+Giảng viên/Giám thị: GV123 / 
 
-```
-git commit -m "message"
-```
-
-## Đẩy file
-
-```
-git push
-```
-## Cách chạy
-
-### Backend
-```
-uvicorn main:app --reload
+Bảo vệ/Kỹ thuật: BV001 / bv123
 ```
 
-### Frontend
+## Main Files
+
+```text
+EduWatch/
+|-- data/
+|   |-- eduwatch.db
+|   |-- avatars/
+|   |-- video/
+|   `-- captures/
+|-- AI_model/
+|-- src/
+|   |-- ai_core/
+|   |-- database_query/
+|   |-- services/
+|   |-- utils/
+|   `-- database_bootstrap.py
+|-- view/
+|-- app.py
+|-- streamlit_app.py
+|-- init_db.py
+|-- requirement.txt
+`-- README.md
 ```
-streamlit run main.py
-```
+
+## Notes
+
+- `streamlit_app.py` không phụ thuộc `nicegui`.
+- Database hiện tại trong `data/eduwatch.db` được giữ nguyên và không bị reset.
+- `init_db.py` vẫn là lệnh khởi tạo schema/demo data chuẩn cho project.

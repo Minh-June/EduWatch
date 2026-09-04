@@ -1,0 +1,48 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Logs
+*.log
+*.err.log
+server_stdout.log
+server_stderr.log
+
+# Temp/test artifacts
+tmp/
+temp/
+*.tmp
+.apptest_reports*/
+.apptest_tmp*/
+.chrome-*/
+_post_check_cache/
+.refactor_safety/
+.pytest_cache/
+.mypy_cache/
+
+# Backups
+streamlit_app_before_*.py
+streamlit_app_*backup*.py
+*_backup.py
+*.bak
+*.old
+
+# Cleanup archives
+_cleanup_archive_*/
+_cleanup_backup_non_streamlit/
+
+# Secrets
+.env
+.streamlit/secrets.toml
+
+# Debug screenshots
+reports-*.png
+reports-state-*.png
+spacing-auth-*.png
+buildings-ui-recovery*.png
