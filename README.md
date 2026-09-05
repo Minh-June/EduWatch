@@ -36,7 +36,13 @@ streamlit run streamlit_app.py
 | Giảng viên / Giám thị | `GV123` | `gv123` |
 | Bảo vệ / Kỹ thuật viên | `BV001` | `bv123` |
 
-**III. CẤU TRÚC DỰ ÁN**
+**III. LƯU Ý VẬN HÀNH**
+
+streamlit_app.py là cổng giao diện chính thức duy nhất, hệ thống hoàn toàn độc lập và không còn phụ thuộc vào nicegui.
+
+Cơ sở dữ liệu mặc định được lưu trữ cục bộ tại đường dẫn data/eduwatch.db. Trường hợp cần làm mới hoặc khôi phục lại dữ liệu mẫu gốc, vui lòng chạy lại lệnh python init_db.py.
+
+**IV. CẤU TRÚC DỰ ÁN**
 
 ```text
 EduWatch/
@@ -56,9 +62,3 @@ EduWatch/
 |-- init_db.py                    # Mã nguồn khởi tạo cơ sở dữ liệu và dữ liệu ban đầu
 |-- requirement.txt               # Danh sách thư viện phụ thuộc
 `-- README.md                     # Tài liệu hướng dẫn dự án
-
-IV. LƯU Ý VẬN HÀNH
-
-streamlit_app.py là cổng giao diện chính thức duy nhất, hệ thống hoàn toàn độc lập và không còn phụ thuộc vào nicegui.
-
-Cơ sở dữ liệu mặc định được lưu trữ cục bộ tại đường dẫn data/eduwatch.db. Trường hợp cần làm mới hoặc khôi phục lại dữ liệu mẫu gốc, vui lòng chạy lại lệnh python init_db.py.
