@@ -1,52 +1,44 @@
-# EduWatch VNUA - Hệ Thống Giám Sát Thái Độ Học Tập & Thi Cử Bằng AI
+# EduWatch VNUA
 
-EduWatch là giải pháp ứng dụng AI và Thị giác máy tính (Computer Vision) hỗ trợ giám sát phòng học, đánh giá thái độ học tập và phát hiện các hành vi vi phạm quy chế thi theo thời gian thực.
+### He Thong Giam Sat Thai Do Hoc Tap Va Vi Pham Quy Che Thi Bang AI
 
-Hệ thống được phát triển trên nền tảng **Streamlit**, hỗ trợ quản lý tập trung từ luồng Camera IP đến xử lý dữ liệu và xuất báo cáo tự động.
+EduWatch la giai phap ung dung Tri tue nhan tao (AI) va Thi giac may tinh (Computer Vision) ho tro giam sat phong hoc, danh gia thai do hoc tap va tu dong phat hien cac hanh vi vi pham quy che thi theo thoi gian thuc.
+
+He thong duoc phat trien tren nen tang **Streamlit**, ho tro quan ly tap trung tu luong Camera IP den xu ly phan tich du lieu va xuat bao cao tu dong.
 
 ---
 
-## 🚀 Hướng dẫn cài đặt & Khởi chạy
+## 1. Huong Dan Cai Dat va Khoi Chay
 
-### 1. Yêu cầu môi trường
-- Python 3.10+ trở lên.
-- Đã cài đặt Git.
+### Yeu cau moi truong
+- Python 3.10 tro len
+- Git
 
-### 2. Cài đặt các thư viện cần thiết
-Mở terminal tại thư mục gốc của dự án và chạy:
+### Cac buoc thuc hien
 
+**Buoc 1: Khoi tao moi truong ao va cai dat thu vien**
 ```powershell
-# Khởi tạo môi trường ảo (khuyến nghị)
 python -m venv venv
 .\venv\Scripts\activate
-
-# Cài đặt thư viện
 pip install -r requirement.txt
-3. Khởi tạo cơ sở dữ liệu (lần đầu chạy)PowerShellpython init_db.py
-4. Khởi chạy ứng dụng StreamlitPowerShellstreamlit run streamlit_app.py
-Mở trình duyệt và truy cập:Plaintexthttp://localhost:8501
-🔑 Tài khoản DemoPhân quyềnMã người dùngMật khẩu mặc địnhQuản trị viên (Admin)AD001admin123Giảng viên / Giám thịGV123gv123Bảo vệ / Kỹ thuật viênBV001bv123(Lưu ý: Nếu mật khẩu tài khoản GV123 khác với gv123, bạn cập nhật lại theo cấu hình trong file init_db.py).📂 Cấu trúc thư mục chínhPlaintextEduWatch/
-|-- AI_model/                     # Chứa mô hình AI (trọng số, cấu hình nhận diện)
+Buoc 2: Khoi tao co so du lieu ban dauPowerShellpython init_db.py
+Buoc 3: Khoi chay ung dung StreamlitPowerShellstreamlit run streamlit_app.py
+Sau khi khoi chay thanh cong, truy cap he thong tai dia chi:Plaintexthttp://localhost:8501
+2. Danh Sach Tai Khoan Thu NghiemPhan quyenMa nguoi dungMat khau mac dinhQuan tri vien (Admin)AD001admin123Giang vien / Giam thiGV123gv123Bao ve / Ky thuat vienBV001bv123Ghi chu: Neu mat khau tai khoan GV123 co su thay doi, vui long doi chieu voi cau hinh khoi tao trong tep init_db.py.3. Cau Truc Thu Muc Du AnPlaintextEduWatch/
+|-- AI_model/                     # Mo hinh AI, trong so huan luyen va cau hinh nhan dien
 |-- data/
-|   |-- eduwatch.db               # SQLite database lưu trữ người dùng & lịch sử
-|   |-- avatars/                  # Ảnh hồ sơ người dùng
-|   |-- video/                    # Video lưu trữ mẫu
-|   `-- captures/                 # Ảnh/khung hình chụp vi phạm
+|   |-- eduwatch.db               # Co so du lieu SQLite luu tru nguoi dung va nhat ky
+|   |-- avatars/                  # Hinh anh dai dien nguoi dung
+|   |-- video/                    # Tap tin video mau
+|   `-- captures/                 # Khung hinh trich xuat cac truong hop vi pham
 |-- src/
-|   |-- ai_core/                  # Core xử lý AI: Detector, Camera Manager, Alert
-|   |-- database_query/           # Tương tác truy vấn DB (Buildings, Rooms, Logs,...)
-|   |-- services/                 # Xử lý logic dịch vụ (Detection, Violation Log)
-|   |-- components/               # Giao diện & Component phụ trợ
-|   `-- utils/                    # Cấu hình hệ thống (config.py)
-|-- streamlit_app.py              # Entrypoint chính của hệ thống Website
-|-- init_db.py                    # Script bootstrap schema và tài khoản mẫu
-|-- requirement.txt               # Danh sách thư viện phụ thuộc
-`-- README.md                     # Tài liệu hướng dẫn dự án
-📌 Ghi chústreamlit_app.py là giao diện chính thức, không phụ thuộc vào nicegui.Cơ sở dữ liệu mặc định nằm tại data/eduwatch.db. Để làm mới toàn bộ dữ liệu mẫu, chạy lại python init_db.py.
----
-
-### Sau khi dán vào `README.md`, bạn chỉ cần chạy 3 lệnh để cập nhật lên GitHub:
-```powershell
-git add README.md
-git commit -m "docs: update professional README with setup guide and credentials"
-git push origin main
+|   |-- ai_core/                  # Module xu ly AI: Detector, Camera Manager, Alert
+|   |-- database_query/           # Module truy van co so du lieu (Buildings, Rooms, Logs,...)
+|   |-- services/                 # Xu ly nghiep vu he thong (Detection, Violation Log)
+|   |-- components/               # Cac thanh phan giao dien bo tro
+|   `-- utils/                    # Tep cau hinh he thong (config.py)
+|-- streamlit_app.py              # Diem khoi chay chinh cua he thong Website
+|-- init_db.py                    # Script khoi tao cau truc du lieu va tai khoan mau
+|-- requirement.txt               # Danh sach cac thu vien phu thuoc
+`-- README.md                     # Tai lieu huong dan du an
+4. Luu Y Ky ThuatTep streamlit_app.py la giao dien chinh thuc cua du an va khong con phu thuoc vao thu vien nicegui.Co so du lieu mac dinh duoc luu tru tai data/eduwatch.db. Truong hop can thiet lap lai toan bo du lieu mau ban dau, thuc hien chay lai lenh:PowerShellpython init_db.py
