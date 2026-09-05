@@ -4,7 +4,9 @@ EduWatch là giải pháp ứng dụng AI và Thị giác máy tính (Computer V
 
 Hệ thống được phát triển trên nền tảng **Streamlit**, hỗ trợ quản lý tập trung từ luồng Camera IP đến xử lý dữ liệu và xuất báo cáo tự động.
 
-## Hướng dẫn cài đặt & Khởi chạy
+---
+
+## 🚀 Hướng dẫn cài đặt & Khởi chạy
 
 ### 1. Yêu cầu môi trường
 - Python 3.10+ trở lên.
@@ -13,30 +15,17 @@ Hệ thống được phát triển trên nền tảng **Streamlit**, hỗ trợ
 ### 2. Cài đặt các thư viện cần thiết
 Mở terminal tại thư mục gốc của dự án và chạy:
 
+```powershell
 # Khởi tạo môi trường ảo (khuyến nghị)
 python -m venv venv
 .\venv\Scripts\activate
 
 # Cài đặt thư viện
 pip install -r requirement.txt
-
-### 3. Khởi tạo cơ sở dữ liệu (lần đầu chạy)
-python init_db.py
-
-### 4. Khởi chạy ứng dụng Streamlit
-streamlit run streamlit_app.py
-
-### 5. Mở trình duyệt và truy cập
-http://localhost:8501
-
-### 6. Tài khoản Demo
-Phân quyền              Mã người dùng       Mật khẩu mặc định
-Quản trị viên (Admin)       AD001               admin123
-Giảng viên / Giám thị       GV123               gv123
-Bảo vệ / Kỹ thuật viên      BV001               bv123
-
-### 7. Cấu trúc thư mục chính
-EduWatch/
+3. Khởi tạo cơ sở dữ liệu (lần đầu chạy)PowerShellpython init_db.py
+4. Khởi chạy ứng dụng StreamlitPowerShellstreamlit run streamlit_app.py
+Mở trình duyệt và truy cập:Plaintexthttp://localhost:8501
+🔑 Tài khoản DemoPhân quyềnMã người dùngMật khẩu mặc địnhQuản trị viên (Admin)AD001admin123Giảng viên / Giám thịGV123gv123Bảo vệ / Kỹ thuật viênBV001bv123(Lưu ý: Nếu mật khẩu tài khoản GV123 khác với gv123, bạn cập nhật lại theo cấu hình trong file init_db.py).📂 Cấu trúc thư mục chínhPlaintextEduWatch/
 |-- AI_model/                     # Chứa mô hình AI (trọng số, cấu hình nhận diện)
 |-- data/
 |   |-- eduwatch.db               # SQLite database lưu trữ người dùng & lịch sử
@@ -53,8 +42,11 @@ EduWatch/
 |-- init_db.py                    # Script bootstrap schema và tài khoản mẫu
 |-- requirement.txt               # Danh sách thư viện phụ thuộc
 `-- README.md                     # Tài liệu hướng dẫn dự án
+📌 Ghi chústreamlit_app.py là giao diện chính thức, không phụ thuộc vào nicegui.Cơ sở dữ liệu mặc định nằm tại data/eduwatch.db. Để làm mới toàn bộ dữ liệu mẫu, chạy lại python init_db.py.
+---
 
-### 8. Ghi chú
-streamlit_app.py là giao diện chính thức, không phụ thuộc vào nicegui.
-
-Cơ sở dữ liệu mặc định nằm tại data/eduwatch.db. Để làm mới toàn bộ dữ liệu mẫu, chạy lại python init_db.py.
+### Sau khi dán vào `README.md`, bạn chỉ cần chạy 3 lệnh để cập nhật lên GitHub:
+```powershell
+git add README.md
+git commit -m "docs: update professional README with setup guide and credentials"
+git push origin main
