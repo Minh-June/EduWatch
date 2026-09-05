@@ -15,15 +15,12 @@ Mở PowerShell tại thư mục gốc của dự án và chạy các lệnh:
 python -m venv venv
 .\venv\Scripts\activate
 
-
 - Cài đặt danh mục thư viện phụ thuộc:
 pip install -r requirement.txt
-
 
 **3. Khởi tạo cơ sở dữ liệu**
 Chạy lệnh khởi tạo cấu trúc cơ sở dữ liệu mẫu cho lần đầu vận hành:
 python init_db.py
-
 
 **4. Khởi chạy ứng dụng**
 - Chạy lệnh kích hoạt giao diện web:
@@ -60,7 +57,7 @@ EduWatch/
 |-- requirement.txt               # Danh sách thư viện phụ thuộc
 `-- README.md                     # Tài liệu hướng dẫn dự án
 
-**IV. LƯU Ý VẬN HÀNH**
+IV. LƯU Ý VẬN HÀNH
 
 streamlit_app.py là cổng giao diện chính thức duy nhất, hệ thống hoàn toàn độc lập và không còn phụ thuộc vào nicegui.
 
