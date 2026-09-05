@@ -59,7 +59,8 @@ EduWatch/
 |-- init_db.py                    # Mã nguồn khởi tạo cơ sở dữ liệu và dữ liệu ban đầu
 |-- requirement.txt               # Danh sách thư viện phụ thuộc
 `-- README.md                     # Tài liệu hướng dẫn dự án
-IV. LƯU Ý VẬN HÀNH
+
+**IV. LƯU Ý VẬN HÀNH**
 
 streamlit_app.py là cổng giao diện chính thức duy nhất, hệ thống hoàn toàn độc lập và không còn phụ thuộc vào nicegui.
 
